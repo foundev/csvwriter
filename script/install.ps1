@@ -16,7 +16,6 @@
 
 Set-Location "$PSScriptRoot\.."
 
-
 mkdir -ErrorAction SilentlyContinue -Path 'C:\Program Files\csvwriter'
 mkdir -ErrorAction SilentlyContinue -Path 'C:\Program Files\csvwriter\bin'
 Copy-Item .\README.md 'C:\Program Files\csvwriter\README.md'

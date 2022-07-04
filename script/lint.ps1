@@ -15,5 +15,5 @@
 
 
 Set-Location "$PSScriptRoot\.."
-
+cargo fmt
 cargo clippy
