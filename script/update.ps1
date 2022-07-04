@@ -20,7 +20,6 @@ Get-Date
 
 cargo clean
 
-
 Write-Output "checking dependencies and build"
 Get-Date
 

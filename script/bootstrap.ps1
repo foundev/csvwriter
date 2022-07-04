@@ -35,5 +35,15 @@ if (Get-Command "cargo.exe" -ErrorAction SilentlyContinue)
    Write-Output "cargo.exe is present skipping install"
 } else {
    Write-Output "cargo could not be found installing rust which includes rust via scoop"
-   scoop install rust
+   scoop install rustup
+}
+
+Write-Output "checking if rustfmt is present"
+
+if (Get-Command "rustfmt" -ErrorAction SilentlyContinue) 
+{ 
+   Write-Output "rustfmt is present skipping install"
+} else {
+   Write-Output "rustfmt could not be found installing"
+   rustup component add rustfmt
 }

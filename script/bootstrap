@@ -23,3 +23,11 @@ then
     echo "rustc could not be found installing rustup"
     curl https://sh.rustup.rs -sSf | sh -s -- -y
 fi
+
+
+echo "checking if rustfmt is present"
+if ! command -v rustmt &> /dev/null
+then
+    echo "rustfmt could not be found installing"
+    rustup component add rustfmt
+fi
